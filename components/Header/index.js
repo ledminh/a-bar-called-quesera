@@ -4,13 +4,13 @@ export default function Header() {
 
     return (
         <header className={styles.wrapper}>
-            <section className="logo">
+            <section className={styles.logo}>
                 <div>LG</div>
             </section>
-            <section className="title">
+            <section className={styles.title}>
                 <span>A BAR CALLED GEMMA</span>
             </section>
-            <section className="social-link">
+            <section className={styles.socialLinks}>
                 <ul>
                     <li>In</li>
                     <li>Fb</li>

@@ -1,12 +1,53 @@
 .wrapper {
-    width: 90px;
+    width: 5.2rem;
     height: 100%;
     
     position: fixed;
     top: 0;
-    
+
     border-right: 1px solid #fbead2;
     background-color: #1d1b1e;
 
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
     z-index: 1;
+}
+
+.logo {
+    //add something here
+}
+
+.title {
+    text-transform: uppercase;
+    width: 220px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    transform: rotate(-90deg);
+}
+
+.socialLinks {
+    
+    ul {
+        list-style: none;
+        padding: 0;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    li {
+        text-align: center;
+        font-size: 1.5rem;
+        flex-basis: 100%;
+
+        margin-bottom: .2rem;
+
+    }
 }
