@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: center;
 
-    
     button {
         border: none;
         width: 100%;
@@ -19,28 +18,46 @@
         cursor: pointer;
     }
 
-    
 
-    button:hover i {
+    button i[data-expansion-state='NAV-STATUS/READY'] {
         animation: shakeRotation .1s linear 5 both;
+        
     }
 
+    button i[data-expansion-state='NAV-STATUS/EXPANDED'] {
+        animation: rotationR .3s linear;
+    }
+
+    button i[data-expansion-state='NAV-STATUS/CLOSED'] {
+        animation: rotationL .3s linear;
+    }
+
+  
     
 }
 
-@keyframes rotation {
+@keyframes rotationR {
     from {
         transform: none;
     }
 
-    50% {
-        transform: rotate(180deg);
-    }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(180deg);
     }
 }
+
+@keyframes rotationL {
+    from {
+        transform: none;
+    }
+
+
+    to {
+        transform: rotate(-180deg);
+    }
+}
+
 
 @keyframes shakeRotation {
     from {
