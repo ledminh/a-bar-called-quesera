@@ -1,0 +1,61 @@
+.logo {
+
+    width: 100%;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    button {
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        color: inherit;
+        font-size: 3rem;
+
+        cursor: pointer;
+    }
+
+    
+
+    button:hover i {
+        animation: shakeRotation .1s linear 5 both;
+    }
+
+    
+}
+
+@keyframes rotation {
+    from {
+        transform: none;
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shakeRotation {
+    from {
+        transform: none;
+    }
+
+    33.3333333% {
+        transform: rotate(-5deg);
+    }
+
+    66.66666666% {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: none;
+    }
+}
