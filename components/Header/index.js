@@ -1,15 +1,14 @@
 import styles from './Header.module.scss';
 import Logo from './Logo';
 import SocialLinks from './SocialLinks';
+import Title from './Title';
 
 export default function Header() {
 
     return (
         <header className={styles.wrapper}>
             <Logo />
-            <section className={styles.title}>
-                <span>A BAR CALLED GEMMA</span>
-            </section>
+            <Title />
             <SocialLinks />
         </header>
     )
