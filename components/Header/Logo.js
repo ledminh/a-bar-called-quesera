@@ -12,18 +12,15 @@ export default function Logo({expanded,
             <button 
                 onClick={
                     () => {
-                        console.log(expansionState);
                         setExpansionState(stateMachine.states[expansionState].on.click)
                         setExpanded(!expanded);                    
                     }
                 }
                 onMouseOver={() => {
-                    //console.log(`currentState: ${expansionState} -- MOUSE OVER --> ${stateMachine.states[expansionState].on.mouseOver}`);
                     setExpansionState(stateMachine.states[expansionState].on.mouseOver)
 
                 }}
                 onMouseOut={() => {
-                    //console.log(`currentState: ${expansionState} -- MOUSE OUT --> ${stateMachine.states[expansionState].on.mouseOut}`);
 
                     setExpansionState(stateMachine.states[expansionState].on.mouseOut);
                 }}

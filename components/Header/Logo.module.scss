@@ -15,6 +15,7 @@
         color: inherit;
         font-size: 3rem;
 
+      
         cursor: pointer;
     }
 
@@ -43,7 +44,7 @@
 
 
     to {
-        transform: rotate(180deg);
+        transform: rotateZ(180deg);
     }
 }
 
@@ -54,7 +55,7 @@
 
 
     to {
-        transform: rotate(-180deg);
+        transform: rotateZ(-180deg);
     }
 }
 
