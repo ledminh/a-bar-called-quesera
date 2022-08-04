@@ -5,6 +5,8 @@ import Logo from './Logo';
 import SocialLinks from './SocialLinks';
 import Title from './Title';
 
+import Menu from './Menu';
+
 const useExpansionState = () => {
     const [expanded, setExpanded] = useState(false);
 
@@ -78,6 +80,7 @@ export default function Header() {
         <header 
             className={styles.wrapper} 
             data-expanded={expanded}>
+            
             <section className={styles.label}>
                 <Logo 
                     expanded={expanded}
@@ -89,6 +92,12 @@ export default function Header() {
                 <Title />
                 <SocialLinks />
             </section>
+
+            <section className={styles.menu}>
+                <Menu expanded={expanded}/>
+            </section>
+            
+            
         </header>
     )
 }

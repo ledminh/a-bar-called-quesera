@@ -8,6 +8,7 @@
     border-right: 1px solid #fbead2;
     background-color: #1d1b1e;
 
+    display: flex;
 
     z-index: 1;
     
@@ -33,3 +34,10 @@
     z-index: 2;
 }
 
+.menu {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
