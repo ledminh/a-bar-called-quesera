@@ -18,8 +18,7 @@
         cursor: pointer;
         
     }
-
-    
+   
 
     &[data-expanded='true'] li {
         transform: none;
@@ -48,14 +47,19 @@
                 transition: clip-path .3s;
             }
 
-            &:hover::after {
-               
-
+            &:hover::after {         
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-                
-
             }
         }
     }
+
+    @media (max-width:900px) {
+        li {
+            transform: translateY(80%);
+
+            text-align: center;
+        }
+    }
+
+    
 }

@@ -4,7 +4,7 @@ export default function Title() {
 
     return (
         <section className={styles.title}>
-            <span>A BAR CALLED GEMMA</span>
+            <div className={styles.text}>A BAR CALLED GEMMA</div>
         </section>
     )
 }

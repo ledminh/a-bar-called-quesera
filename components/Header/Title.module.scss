@@ -1,8 +1,24 @@
 .title {
     text-transform: uppercase;
-    width: 220px;
+    
     letter-spacing: 3px;
     font-weight: 500;
-    transform: rotate(-90deg);
+
+    grid-column: 1/1;
+    grid-row: 2/3;
+
+    overflow: hidden;
+    
+    height: 240px;
+    .text {
+        width: 240px;
+
+        transform: rotateZ(-90deg) translateX(-40%);
+    }
+    
+    @media (max-width:900px) {
+        display: none;
+        
+    }
 }
 

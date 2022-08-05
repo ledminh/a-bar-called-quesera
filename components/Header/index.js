@@ -93,7 +93,10 @@ export default function Header() {
                 <SocialLinks />
             </section>
 
-            <section className={styles.menu}>
+            <section 
+                className={styles.menu}
+                data-expanded={expanded}
+                >
                 <Menu expanded={expanded}/>
             </section>
             
