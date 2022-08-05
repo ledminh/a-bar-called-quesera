@@ -68,7 +68,7 @@ const useExpansionState = () => {
 }
 
 
-export default function Header() {
+export default function MainNavBar() {
     const {expanded,
         setExpanded,
         expansionState,
