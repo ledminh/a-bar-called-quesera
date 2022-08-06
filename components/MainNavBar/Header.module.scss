@@ -22,7 +22,7 @@
         
     }
 
-    @media (max-width:900px) {
+    @media (max-width:1170px) {
         display: block;
 
         top: calc(100% - 5.2rem);
@@ -62,7 +62,7 @@
 
     z-index: 2;
 
-    @media (max-width:900px) {
+    @media (max-width:1170px) {
         position:absolute;
         top: 0;
 
@@ -90,7 +90,7 @@
     align-items: center;
 
 
-    @media (max-width:900px) {
+    @media (max-width:1170px) {
             
         &[data-expanded='true'] {
             border-top: 1px solid #fbead2;

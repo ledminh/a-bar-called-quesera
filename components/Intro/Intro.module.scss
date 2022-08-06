@@ -1,3 +1,67 @@
 .wrapper {
-    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
+
+    border-bottom: 1px solid #fbead2;
+}
+
+.article {
+    flex-basis: 50%;
+}
+
+.title {
+    position: relative;
+    height: 10.5rem;
+
+    h6, h1 {
+        position: absolute;
+    }
+
+    h1 {
+        left: 2.2rem;
+    }
+
+    h6 {
+        left: 7rem;
+        top: 2.5rem;
+    }
+}
+
+.subtitle {
+    margin-left: 2.8rem;
+}
+
+.text {
+    margin-left: 2.8rem;
+
+    line-height: 2.5rem;
+
+}
+
+.glassOfWineImg {
+    content: "";        
+    float: right;
+    
+    width: 100px;
+
+    z-index: -1;
+}
+
+
+.photoWrapper {
+    flex-basis: 50%;
+    position: relative;
+
+    border-left: 1px solid #fbead2;
+
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
 }
