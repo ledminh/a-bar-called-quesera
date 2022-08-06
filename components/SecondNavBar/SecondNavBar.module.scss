@@ -4,6 +4,9 @@
 
     padding: 0;
 
+    @media (max-width: 900px) {
+        display: none;    
+    }
 
     ul {
         list-style: none;
