@@ -10,9 +10,11 @@ export default function Intro () {
     return (
         <section className={styles.wrapper}>
             <div className={styles.article}>
-                <div className={styles.title}>
-                    <h6>A BAR CALLED</h6>
-                    <h1>Gemma</h1>
+                <div className={styles.titleWrapper}>
+                    <div className={styles.title}>
+                        <h6>A BAR CALLED</h6>
+                        <h1>Gemma</h1>
+                    </div>
                 </div>
                 <div className={styles.subtitle}>
                     <h3>Your neighborhood bar</h3>
