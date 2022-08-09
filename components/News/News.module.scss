@@ -1,0 +1,67 @@
+.wrapper {
+    display: grid;
+
+    grid-template-columns: auto;
+    grid-template-rows: 52px auto;
+
+
+}
+
+.title {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #fbead2;
+
+    
+}
+
+.text {
+    display: inline-block;
+    padding-left: 1.5rem;
+    font-size: 120%;
+}
+
+.pagiButtons {
+    list-style: none;
+
+    display: flex;
+
+    li {
+        margin-right: .7rem;
+
+        button {
+            appearance: none;
+            border: none;
+            background: inherit;
+
+
+            color: #fbead2;
+            font-size: 1.3rem;
+
+            width: 2rem;
+            height: 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid #fbead2;
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            &.btnPrev {
+                transform: rotateZ(90deg);
+            }
+
+            &.btnNext {
+                transform: rotateZ(-90deg);
+            }
+        }
+    }
+}
+

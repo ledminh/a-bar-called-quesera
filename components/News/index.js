@@ -8,8 +8,8 @@ export default function News() {
             <div className={styles.title}>
                 <span className={styles.text}>NEWS</span>
                 <ul className={styles.pagiButtons}>
-                    <li><button>{'<'}</button></li>
-                    <li><button>{'>'}</button></li>
+                    <li><button className={styles.btnPrev}><i className="fa fa-solid fa-angle-down"></i></button></li>
+                    <li><button className={styles.btnNext}><i className="fa fa-solid fa-angle-down"></i></button></li>
                 </ul>
             </div>
             <div className={styles.newsList}>
