@@ -11,6 +11,11 @@
         grid-template-columns: auto;
         
     }
+
+    @media (max-width:710px){
+        grid-template-rows: auto;
+    }
+
 }
 
 .article {
@@ -25,6 +30,10 @@
         padding-left: 4.5rem;
 
         border-bottom: 1px solid #fbead2;
+    }
+
+    @media (max-width:710px){
+        border-bottom: none;
     }
 }
 
