@@ -5,6 +5,7 @@
     grid-template-rows: 52px auto;
 
 
+    margin-bottom: 10rem;
 }
 
 .title {
@@ -36,6 +37,8 @@
         button {
             appearance: none;
             border: none;
+            padding: 0;
+            
             background: inherit;
 
 
@@ -56,12 +59,104 @@
 
             &.btnPrev {
                 transform: rotateZ(90deg);
+
+                &:hover {
+                    i {
+                        transform: translateY(10%);
+                    }
+                }
+
+                &:active {
+                    transform: rotateZ(90deg) scale(0.95);
+                }
             }
 
             &.btnNext {
                 transform: rotateZ(-90deg);
+
+                &:hover {
+                    i {
+                        transform: translateY(10%);
+                    }
+                }
+
+                &:active {
+                    transform: rotateZ(-90deg) scale(0.95);
+                }
+            }
+
+            &:disabled {
+                color: gray;
             }
         }
     }
 }
 
+
+.translate25,
+.translate50,
+.translate75 {
+    transform: none;
+}
+
+.translate25 {
+    @media (max-width: 1170px) {
+        transform: translateX(-25%);
+    }    
+}
+
+.translate50 {
+    @media (max-width: 1170px) {
+        transform: translateX(-50%);
+    }
+    
+}
+
+.translate75 {
+    @media (max-width: 1170px) {
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: 710px) {
+        transform: translateX(-75%);
+    }
+}
+
+
+.newsList {
+    overflow-x: hidden;
+} 
+
+.newsListContent {
+    display: flex;
+    flex-flow: row nowrap;
+
+    --max-i: 0;
+
+
+    @media (max-width: 1170px) {
+        width: 200%;
+
+        --max-i: 2;
+    }
+
+    @media (max-width: 710px) {
+        width: 400%;
+
+        --max-i: 3;
+    }
+
+    transition: transform .3s;
+}
+
+.newsItem {
+    flex-basis: 25%;
+    
+    @media (max-width: 1170px) {
+        flex-basis: 50%;
+    }
+
+    @media (max-width: 710px) {
+        flex-basis: 100%;
+    }
+}
