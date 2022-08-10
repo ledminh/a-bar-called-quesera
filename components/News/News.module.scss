@@ -6,6 +6,8 @@
 
 
     margin-bottom: 10rem;
+    border-bottom: 1px solid #fbead2;
+
 }
 
 .title {
@@ -133,10 +135,14 @@
 
     --max-i: 0;
 
+    
 
     @media (max-width: 1170px) {
-        width: 200%;
+        border-left: 1px solid #fbead2;
+        border-right: 1px solid #fbead2;
 
+        width: 200%;
+        
         --max-i: 2;
     }
 
@@ -152,11 +158,40 @@
 .newsItem {
     flex-basis: 25%;
     
+    border-left: 1px solid #fbead2;
+    
+    &:first-child {
+        border-left: none;
+    }
+    
+    padding: 2rem;
+ 
+    h3, h4 {
+        line-height: 2.5rem;
+    }
+
+    line-height: 2.1rem;
+
     @media (max-width: 1170px) {
         flex-basis: 50%;
     }
 
     @media (max-width: 710px) {
         flex-basis: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        font-family: monospace;
+        font-size: 1.2rem;
+
+        color: rgb(229, 181, 91);
+
+        cursor: pointer;
+
+        &:hover {
+            border-bottom: 1px solid rgb(229, 181, 91);
+        }
     }
 }

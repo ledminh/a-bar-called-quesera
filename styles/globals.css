@@ -44,9 +44,13 @@ h1 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
+h4 {
+  font-size: 1.3rem;
+  font-weight: 350;
+}
 h6 {
   font-size: 1.2rem;
 }

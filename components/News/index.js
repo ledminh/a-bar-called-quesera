@@ -169,7 +169,7 @@ export default function News() {
                         newsData.map((nD, i) => (
                             <article key={i} className={styles.newsItem}>
                                 <h3 className={styles.newsTitle}>{nD.newsTitle}</h3>
-                                <h3 className={styles.newsSubtitle}>{nD.newsSubtitle}</h3>
+                                <h4 className={styles.newsSubtitle}>{nD.newsSubtitle}</h4>
                                 <p>
                                     {nD.newsContent}
                                 </p>
