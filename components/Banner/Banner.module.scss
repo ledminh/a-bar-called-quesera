@@ -1,0 +1,51 @@
+.wrapper {
+    background-color: #fd2600;
+
+    height: 5rem;
+
+    overflow-x: hidden;
+
+}
+
+
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 172rem;
+    height: 100%;
+
+    align-items: center;
+
+
+    animation: sliding 15s linear infinite;
+}
+
+
+.text,
+.bullet {
+    display: inline-block;
+
+    margin-right: 1rem;
+}
+
+.text {
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    
+
+}
+
+.bullet {
+    font-size: 1.7rem;
+}
+
+@keyframes sliding {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
