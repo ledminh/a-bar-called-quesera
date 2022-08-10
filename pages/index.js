@@ -6,6 +6,7 @@ import Intro from '../components/Intro';
 import News from '../components/News';
 
 import styles from '../styles/Home.module.scss';
+import Banner from '../components/Banner';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <SecondNavBar />
         <Intro />
         <News />
+        <Banner />
       </main>
     </PageLayout>
       

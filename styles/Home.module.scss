@@ -1,9 +1,11 @@
 .main {
     margin-left: 5.2rem;
+    
 
     z-index: 2000;
 
     @media (max-width: 1170px) {
         margin-left: 0;
+        margin-bottom: 5.3rem;
     }
 }
