@@ -1,0 +1,80 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
+
+    border-bottom: 1px solid #fbead2;
+
+    @media (max-width:1170px) {
+        grid-template-rows: 1fr 1.2fr;
+        grid-template-columns: auto;
+        
+    }
+
+}
+
+.photoWrapper {
+    position: relative;
+    border-right: 1px solid #fbead2;
+
+    height: 100%;
+    width: 100%;
+
+    @media (max-width:1170px) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        border-right: none;
+        
+        
+        width: 100%;
+    }
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    padding: 2rem;
+    display: flex;
+
+    flex-flow: column nowrap;
+}
+
+.title {
+
+
+    .star {
+        float: right;
+        font-size: 6.5rem;
+
+        color: rgb(234, 206, 123);
+
+        margin-right: 2rem;
+    }
+}
+
+.body {
+    line-height: 2.5rem;
+}
+
+.awards {
+    display: flex;
+    flex-flow: row wrap;
+    
+    justify-content: center;
+
+}
+
+.medal {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}

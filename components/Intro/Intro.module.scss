@@ -19,7 +19,6 @@
 }
 
 .article {
-    flex-basis: 50%;    
     padding-left: 2rem;
 
     @media (max-width:1170px) {
@@ -99,7 +98,6 @@
 
 
 .photoWrapper {
-    flex-basis: 50%;
     position: relative;
 
     border-left: 1px solid #fbead2;
