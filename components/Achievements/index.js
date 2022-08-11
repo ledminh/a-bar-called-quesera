@@ -14,7 +14,7 @@ export default function Achievements() {
                 <div className={styles.photo}>
                     <Image 
                         src={wineOnTableImg}
-                        alt="A glasss of wine on a table"
+                        alt="A table with a lot of wine bottles"
                         layout='fill'
                         objectFit='cover'
                         sizes='100vw'

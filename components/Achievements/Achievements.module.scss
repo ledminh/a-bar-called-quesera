@@ -5,11 +5,14 @@
     
 
     border-bottom: 1px solid #fbead2;
+    border-top: 1px solid #fbead2;
+
 
     @media (max-width:1170px) {
         grid-template-rows: 1fr 1.2fr;
         grid-template-columns: auto;
-        
+        border-bottom: none;
+
     }
 
 }
@@ -27,6 +30,8 @@
 
         border-right: none;
         
+        border-bottom: 1px solid #fbead2;
+
         
         width: 100%;
     }
@@ -58,10 +63,22 @@
 
         margin-right: 2rem;
     }
+
+    @media (max-width:710px){
+        
+        h1 {
+            font-size: 4rem;
+        }
+    }
 }
 
 .body {
     line-height: 2.5rem;
+    @media (max-width:710px){
+        
+        line-height: 2.2rem;
+        
+    }
 }
 
 .awards {
