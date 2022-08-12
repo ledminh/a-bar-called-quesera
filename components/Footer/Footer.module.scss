@@ -1,0 +1,85 @@
+.wrapper {
+    display: flex;
+
+    flex-flow: row wrap;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid #fbead2;
+
+}
+
+
+.text {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    @media (max-width: 1170px) {
+        flex-basis: 100%;
+    }
+
+}
+
+.contact {
+    flex-basis: 40%;
+    height: 100%;
+
+    padding-left: 2rem;
+    margin-right: 2rem;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        line-height: 2rem;
+
+        font-weight: 600;
+    }
+
+}
+
+.openHours {
+    flex-basis: 40%;
+    height: 100%;
+
+
+    h3 {
+        flex-basis: 100%;
+        
+    }
+
+    .content {
+        display: flex;
+        flex-flow: row nowrap;
+
+    }
+
+
+    ul {
+        list-style: none;
+        flex-basis: 40%;
+
+        padding: 0;
+
+        margin-right: 2rem;
+        
+    }
+}
+
+.globeWrapper {
+    flex-basis: 50%;
+
+}
+
+
+.globe {
+    background-color: orangered;
+
+    width: 200px;
+    height: 200px;
+}
+
+.copyright {
+    flex-basis: 100%;
+}

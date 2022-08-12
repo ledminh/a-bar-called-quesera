@@ -8,6 +8,7 @@ import News from '../components/News';
 import styles from '../styles/Home.module.scss';
 import Banner from '../components/Banner';
 import Achievements from '../components/Achievements';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <News />
         <Banner />
         <Achievements />
+        <Footer />
       </main>
     </PageLayout>
       
