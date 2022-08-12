@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className={styles.globeWapper}>
+            <div className={styles.globeWrapper}>
                 <div className={styles.globe}/>
             </div>
             <div className={styles.copyright}>
