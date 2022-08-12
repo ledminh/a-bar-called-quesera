@@ -1,10 +1,25 @@
 import styles from './Menu.module.scss';
 
 const MenuNames = [
-    'Home',
-    'Menu',
-    'Book a table',
-    'Contact'
+    {
+        text: "Home",
+        link: "/"
+    },
+
+    {
+        text: "Menu",
+        link: "/menu"
+    },
+
+    {
+        text: "Book a table",
+        link: "/book-a-table"
+    },
+
+    {
+        text: "Contact",
+        link: "/contact"
+    }
 ]
 
 export default function Menu ({expanded}) {
@@ -16,11 +31,11 @@ export default function Menu ({expanded}) {
             data-expanded={expanded}
             >
                 {
-                    MenuNames.map((name, i) => (
+                    MenuNames.map((item, i) => (
                         <li key={i} 
                             style={{'--i': i}}
                         >
-                            <a>{name}</a>
+                            <a href={item.link}>{item.text}</a>
                         </li>
                     ))
                 }

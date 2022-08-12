@@ -3,7 +3,7 @@ import styles from './SecondNavBar.module.scss';
 const Links = [
     {
         text: 'Book',
-        link: '/book'
+        link: '/book-a-table'
     },
     {
         text: 'Menu',
