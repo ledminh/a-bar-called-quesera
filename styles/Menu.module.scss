@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &:not(:nth-last-child(2)) {
+        border-bottom: 1px solid #fbead2;
+
+    }
+}
+
+.col {
+    flex-basis: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+        border-right: 1px solid #fbead2;
+
+    }
+
+}
+
+.photoWrapper {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+    
+}

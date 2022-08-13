@@ -1,6 +1,14 @@
+import Image from 'next/image';
+
+import margarityImg from '../imgs/margarita.jpg';
+import menu2Img from '../imgs/menu-2.jpg';
+import menu3Img from '../imgs/menu-3.jpg';
+
 import styles from '../styles/Menu.module.scss';
 
 import PageLayout from '../layouts/Page';
+import MenuBlock from '../components/MenuBlock';
+
 
 const abcClassics = {
     name: "ABC CLASSICS",
@@ -285,37 +293,80 @@ export default function Menu() {
         <PageLayout>
             <div className={styles.row}>
                 <div className={styles.col}>
-                    {/* <MenuBlock /> */}
+                    <MenuBlock 
+                        data={abcClassics}
+                        />
                 </div>
                 <div className={styles.col}>
-
-                </div>
-            </div>
-
-            <div className={styles.row}>
-                <div className={styles.col}>
-
-                </div>
-                <div className={styles.col}>
-
-                </div>
-            </div>
-
-            <div className={styles.row}>
-                <div className={styles.col}>
-
-                </div>
-                <div className={styles.col}>
-
+                    <div className={styles.photoWrapper}>
+                        <div className={styles.photo}>
+                            <Image 
+                                src={margarityImg}
+                                alt="A magarita"
+                                layout='fill'
+                                objectFit='cover'
+                                sizes='100vw'
+                                objectPosition={'top right'}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div className={styles.row}>
                 <div className={styles.col}>
-
+                    <MenuBlock 
+                        data={oldies}
+                        />
                 </div>
                 <div className={styles.col}>
+                    <div className={styles.photoWrapper}>
+                        <div className={styles.photo}>
+                            <Image 
+                                src={menu2Img}
+                                alt="A cocktail drink"
+                                layout='fill'
+                                objectFit='cover'
+                                sizes='100vw'
+                                objectPosition={'top right'}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <MenuBlock 
+                        data={firstSeason}
+                        />
+                </div>
+                <div className={styles.col}>
+                <div className={styles.photoWrapper}>
+                        <div className={styles.photo}>
+                            <Image 
+                                src={menu3Img}
+                                alt="A cocktail drink"
+                                layout='fill'
+                                objectFit='cover'
+                                sizes='100vw'
+                                objectPosition={'top right'}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <MenuBlock 
+                        data={beerWhineChampange}
+                        />
+                </div>
+                <div className={styles.col}>
+                    <MenuBlock 
+                        data={foodAndBites}
+                        />
                 </div>
             </div>
         </PageLayout>
