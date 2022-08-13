@@ -12,12 +12,19 @@
 .col {
     flex-basis: 50%;
 
-    border: 1px solid red;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @media (max-width:710px){
+        &:first-child {
+            flex-basis: 100%;
+        }
+    
+        &:last-child {
+            display: none;
+        }        
+    }
 }
 
 .form {
@@ -71,4 +78,16 @@
         }
     }
 
+}
+
+.photoWrapper {
+    position: relative;
+    border-right: 1px solid #fbead2;
+
+    height: 100%;
+    width: 100%;
+
+    @media (max-width:710px) {
+        display: none;
+    }
 }

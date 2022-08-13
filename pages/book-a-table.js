@@ -2,7 +2,11 @@ import { useState } from 'react';
 
 import PageLayout from '../layouts/Page';
 
+import Image from 'next/image';
+import bookATableImg from '../imgs/book-a-table.jpg';
+
 import styles from '../styles/Book.module.scss';
+
 
 export default function BookATable () {
     const [state, setState] = useState({
@@ -10,7 +14,7 @@ export default function BookATable () {
         email: "",
         numGuests: 0,
         phone: "",
-        dateAndTime: null,
+        dateAndTime: "",
         comments: ""
     });
 
@@ -85,7 +89,18 @@ export default function BookATable () {
                     </form>
                 </div>
                 <div className={styles.col}>
-
+                    <div className={styles.photoWrapper}>
+                        <div className={styles.photo}>
+                                <Image 
+                                    src={bookATableImg}
+                                    alt="A table in a restaurant"
+                                    layout='fill'
+                                    objectFit='cover'
+                                    sizes='100vw'
+                                    objectPosition={'top right'}
+                                />
+                        </div>
+                    </div>
                 </div>
             </div>
         </PageLayout>
