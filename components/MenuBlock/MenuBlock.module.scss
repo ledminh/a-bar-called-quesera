@@ -1,0 +1,42 @@
+.wrapper {
+
+    width: 100%;
+
+    padding: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+
+    margin-bottom: 1.8rem;
+}
+
+.itemName {
+    flex-basis: 90%;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.itemDesc {
+    flex-basis: 100%;
+
+    font-weight: 300;
+}
+
+.itemPrice {
+    flex-basis: 10%;
+}
+
+
+

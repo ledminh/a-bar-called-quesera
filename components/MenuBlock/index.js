@@ -6,14 +6,14 @@ export default function MenuBlock({data}) {
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>{data.name}</h2>
-            <ul>
+            <ul className={styles.menuList}>
                 {
                     data.items.map(item => (
-                        <div key={item.name}>
-                            <div>{item.name}</div>
-                            <div>{item.desc? item.desc: null}</div>
-                            <div>{item.price}</div>
-                        </div>
+                        <li className={styles.item} key={item.name}>
+                            <div className={styles.itemName}>{item.name}</div>
+                            <div className={styles.itemPrice}>{item.price}</div>
+                            <div className={styles.itemDesc}>{item.desc? item.desc: null}</div>
+                        </li>
                     ))
                 }
             </ul>

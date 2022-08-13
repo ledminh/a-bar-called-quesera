@@ -19,11 +19,11 @@
     z-index: 1;
 
 
-    &[data-expanded='true'] {
-        // width: 28rem;
-        // height: 100%;
+    // &[data-expanded='true'] {
+    //     // width: 28rem;
+    //     // height: 100%;
         
-    }
+    // }
 
     @media (max-width:1170px) {
         display: block;

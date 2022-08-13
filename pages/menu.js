@@ -297,7 +297,7 @@ export default function Menu() {
                         data={abcClassics}
                         />
                 </div>
-                <div className={styles.col}>
+                <div className={styles.col + ' ' + styles.img}>
                     <div className={styles.photoWrapper}>
                         <div className={styles.photo}>
                             <Image 
@@ -305,8 +305,8 @@ export default function Menu() {
                                 alt="A magarita"
                                 layout='fill'
                                 objectFit='cover'
-                                sizes='100vw'
-                                objectPosition={'top right'}
+                                sizes='50vw'
+                                objectPosition={'top left'}
                             />
                         </div>
                     </div>
@@ -314,12 +314,7 @@ export default function Menu() {
             </div>
 
             <div className={styles.row}>
-                <div className={styles.col}>
-                    <MenuBlock 
-                        data={oldies}
-                        />
-                </div>
-                <div className={styles.col}>
+                <div className={styles.col + ' ' + styles.img}>
                     <div className={styles.photoWrapper}>
                         <div className={styles.photo}>
                             <Image 
@@ -333,6 +328,11 @@ export default function Menu() {
                         </div>
                     </div>
                 </div>
+                <div className={styles.col}>
+                    <MenuBlock 
+                        data={oldies}
+                        />
+                </div>
             </div>
 
             <div className={styles.row}>
@@ -341,8 +341,8 @@ export default function Menu() {
                         data={firstSeason}
                         />
                 </div>
-                <div className={styles.col}>
-                <div className={styles.photoWrapper}>
+                <div className={styles.col + ' ' + styles.img}>
+                    <div className={styles.photoWrapper}>
                         <div className={styles.photo}>
                             <Image 
                                 src={menu3Img}
@@ -350,7 +350,7 @@ export default function Menu() {
                                 layout='fill'
                                 objectFit='cover'
                                 sizes='100vw'
-                                objectPosition={'top right'}
+                                objectPosition={'top left'}
                             />
                         </div>
                     </div>
