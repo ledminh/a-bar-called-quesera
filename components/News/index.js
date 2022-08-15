@@ -1,36 +1,7 @@
 import styles from './News.module.scss';
 import { useEffect, useRef, useState } from 'react';
 
-const newsData = [
-    {
-        newsTitle: "New menu released 1",
-        newsSubtitle: "ABCG VOL.4 LIVE",
-        newsContent: "After many many weeks of research, hours of developing and constant bashing heads to the walls we finally got ready to release our new menu. We&rsquo;re super proud and can`&rsquo;`t wait for you to try it out. Come get some!.",
-        link: "https://www.google.com",
-        linkText: "Our new menu"
-    },
-    {
-        newsTitle: "New menu released 2",
-        newsSubtitle: "ABCG VOL.4 LIVE",
-        newsContent: "After many many weeks of research, hours of developing and constant bashing heads to the walls we finally got ready to release our new menu. We&rsquo;re super proud and can`&rsquo;`t wait for you to try it out. Come get some!.",
-        link: "https://www.google.com",
-        linkText: "Our new menu"
-    },
-    {
-        newsTitle: "New menu released 3",
-        newsSubtitle: "ABCG VOL.4 LIVE",
-        newsContent: "After many many weeks of research, hours of developing and constant bashing heads to the walls we finally got ready to release our new menu. We&rsquo;re super proud and can`&rsquo;`t wait for you to try it out. Come get some!.",
-        link: "https://www.google.com",
-        linkText: "Our new menu"
-    },
-    {
-        newsTitle: "New menu released 4",
-        newsSubtitle: "ABCG VOL.4 LIVE",
-        newsContent: "After many many weeks of research, hours of developing and constant bashing heads to the walls we finally got ready to release our new menu. We&rsquo;re super proud and can`&rsquo;`t wait for you to try it out. Come get some!.",
-        link: "https://www.google.com",
-        linkText: "Our new menu"
-    }
-];
+
 
 
 const POS_0 = 'NEWS/SLIDE_STATE/POS_0';
@@ -137,7 +108,19 @@ export default function News() {
         isEnd
     ] = useTranslateClass();
 
+    const [newsData, setNewsData] = useState({
+        loaded: false
+    });
 
+
+    useEffect(() => {
+        fetch('/api/news')
+            .then(res => res.json())
+            .then(data => setNewsData({
+                data: data,
+                loaded: true
+            }))
+    }, []);
     return (
         <section className={styles.wrapper}>
             <div className={styles.title}>
@@ -166,16 +149,18 @@ export default function News() {
                     ref={newsListContentNode}
                 >
                     {
-                        newsData.map((nD, i) => (
-                            <article key={i} className={styles.newsItem}>
-                                <h3 className={styles.newsTitle}>{nD.newsTitle}</h3>
-                                <h4 className={styles.newsSubtitle}>{nD.newsSubtitle}</h4>
-                                <p>
-                                    {nD.newsContent}
-                                </p>
-                                <a href={nD.link}>{nD.linkText}</a>
-                            </article>
-                        ))
+                        
+                        newsData.loaded? 
+                            newsData.data.map((nD, i) => (
+                                <article key={i} className={styles.newsItem}>
+                                    <h3 className={styles.newsTitle}>{nD.newsTitle}</h3>
+                                    <h4 className={styles.newsSubtitle}>{nD.newsSubtitle}</h4>
+                                    <p>
+                                        {nD.newsContent}
+                                    </p>
+                                    <a href={nD.link}>{nD.linkText}</a>
+                                </article>
+                            )) : null
                     }
                 </div>              
             </div>

@@ -1,19 +1,39 @@
 import styles from './Footer.module.scss';
+import {useState, useEffect} from 'react';
 
 export default function Footer() {
+    const [data, setData] = useState({
+        loaded: false
+    });
 
+    useEffect(() => {
+        fetch('/api/footer')
+            .then(res => res.json())
+            .then(data => setData({
+                email: data.email,
+                phone: data.phone,
+                address: data.address,
+                city: data.city,
+                loaded: true
+            }))
+    }, []);
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.text}>
                 <div className={styles.contact}>
                     <h3>Lets connect!</h3>
-                    <ul>
-                        <li>contact@abarcalledgemma.se</li>
-                        <li>+46705845090</li>
-                        <li>Grev Turegatan 30</li>
-                        <li>114 38, Stockholm</li>
-                    </ul>
+                    {
+                        data.loaded? (
+                            <ul>
+                                <li>{data.email}</li>
+                                <li>{data.phone}</li>
+                                <li>{data.address}</li>
+                                <li>{data.city}</li>
+                            </ul>
+                        ): null
+                    }
+
                 </div>
                 <div className={styles.openHours}>
                     <h3>Opening hours</h3>
@@ -34,7 +54,7 @@ export default function Footer() {
                 <div className={styles.globe}/>
             </div>
             <div className={styles.copyright}>
-            Copyright © 2022 Helioworks Food & Beverages AB.
+            Copyright © {(new Date()).getFullYear()} Drinking Inc.
             </div>
         </div>
     );

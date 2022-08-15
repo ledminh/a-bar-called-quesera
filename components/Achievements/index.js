@@ -5,9 +5,23 @@ import Image from 'next/image';
 import medalImg from '../../imgs/medal-1.png';
 
 import wineOnTableImg from '../../imgs/wine-on-table.jpg';
+import { useState, useEffect } from 'react';
 
 
 export default function Achievements() {
+    const [data, setData] = useState({
+        loaded: false
+    });
+
+    useEffect(() => {
+        fetch('/api/achievements')
+            .then(res => res.json())
+            .then(data => setData({
+                content: data.content,
+                loaded: true
+            }))
+    }, []);
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.photoWrapper}>
@@ -29,8 +43,11 @@ export default function Achievements() {
                     <h1>FLAVOURS</h1>
                 </div>
                 <div className={styles.body}>
-                    <p>We started with close to nothing but with an enormous chunk of passion, heart and soul. A dedication, a crystal clear vision and a decision to strive for nothing but the best. Our journey has only started, we will always develop for the better and have a freaking fun time while doing so.</p>
-                    <p>Come join in on the ride - We&rsquo;ll have a blast together.</p>
+                    {
+                        data.loaded?
+                            data.content.map(p => <p key={p}>{p}</p>):
+                            null
+                    }
                 </div>
                 <div className={styles.awards}>
                     <div className={styles.medal}>
