@@ -1,0 +1,100 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+
+    height: 80vh;
+
+    position: relative;
+
+    @media (max-width:710px) {
+        grid-template-columns: auto;
+    }
+
+}
+
+
+.col {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.col.img {
+    grid-column: 2/3;
+}
+
+.col.text {
+    grid-column: 1/2;
+}
+
+
+.content {    
+    width: 80%;
+    margin: auto;
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        line-height: 1.5rem;
+    }
+
+    a {
+        border-bottom: 2px solid rgb(153, 57, 57);
+        
+    }
+
+    .bookATable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 3rem;
+
+        font-size: 1.4rem;
+
+        border: 1px solid #fbead2;
+        text-align: center;
+        
+        cursor: pointer;
+
+        transition: background-color .3s, color .3s;
+        &:hover {
+            background-color: #fbead2;
+            color: #1d1b1e;
+        }
+    }
+    
+  
+
+    
+}
+
+
+
+.title {
+    font-size: 2.5rem;
+}
+
+.photoWrapper {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+
+    @media (max-width:710px) {
+        display: none;
+    }
+}
