@@ -2,7 +2,6 @@ import styles from './MenuBlock.module.scss';
 
 export default function MenuBlock({data}) {
 
-
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>{data.name}</h2>
