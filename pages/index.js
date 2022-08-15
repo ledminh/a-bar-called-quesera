@@ -1,4 +1,4 @@
-import PageLayout from '../layouts/page';
+import PageLayout from '../layouts/PageLayout';
 
 import SecondNavBar from '../components/SecondNavBar';
 import Intro from '../components/Intro';

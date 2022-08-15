@@ -6,7 +6,7 @@ import menu3Img from '../imgs/menu-3.jpg';
 
 import styles from '../styles/Menu.module.scss';
 
-import PageLayout from '../layouts/Page';
+import PageLayout from '../layouts/PageLayout';
 import MenuBlock from '../components/MenuBlock';
 
 import { useState, useEffect } from 'react';

@@ -1,4 +1,4 @@
-import PageLayout from '../layouts/Page';
+import PageLayout from '../layouts/PageLayout';
 import styles from '../styles/Contact.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';

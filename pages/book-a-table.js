@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import PageLayout from '../layouts/Page';
+import PageLayout from '../layouts/PageLayout';
 
 import Image from 'next/image';
 import bookATableImg from '../imgs/book-a-table.jpg';
